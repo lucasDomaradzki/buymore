@@ -1,0 +1,35 @@
+services:
+  buy_more-api:
+    build:
+      context: .
+    container_name: buy_more-api
+    ports:
+      - "9999:9999"
+      - "8080:8080"
+    depends_on:
+      - buy_more-mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://buy_more-mysql:3306/buy_more
+      SPRING_DATASOURCE_USERNAME: buy_more
+      SPRING_DATASOURCE_PASSWORD: buy_more
+    networks:
+      buy_more-network:
+    tty: true
+
+  buy_more-mysql:
+    image: mysql/mysql-server:latest
+    container_name: buy_more-mysql
+    volumes:
+      - "./src/main/resources/sql/product-ddl.sql:/data/database/initial-setup/product-ddl.sql"
+      - "./src/main/resources/sql/create-database.sql:/docker-entrypoint-initdb.d/create-database.sql"
+    environment:
+      MYSQL_DATABASE: buy_more
+      MYSQL_USER: buy_more
+      MYSQL_PASSWORD: buy_more
+      MYSQL_ROOT_PASSWORD: admin
+    networks:
+      buy_more-network:
+    tty: true
+
+networks:
+  buy_more-network:
