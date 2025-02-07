@@ -1,8 +1,8 @@
 create table if not exists product (
     id bigint not null auto_increment,
     name varchar(60) not null,
-    starting_price numeric(5,2) not null,
-    discount numeric(5,2),
+    starting_price numeric(9,2) not null,
+    discount numeric(9,2),
     profit_margin float(2) not null,
     description varchar(750) not null,
     category varchar(60),
