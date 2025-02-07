@@ -34,11 +34,11 @@ http://localhost:8080/swagger-ui.html
 
 ### Accesando  Banco de dados
 O banco de dados MySQL está exposto com os seguintes detalhes:
-Nome do banco: buy_more
-Usuário: buy_more
-Senha: buy_more
-Porta: 3306
-Host: buy_more-mysql
+ - Nome do banco: buy_more
+ - Usuário: buy_more
+ - Senha: buy_more
+ - Porta: 3306
+ - Host: buy_more-mysql
 
 O modo mais fácil de acessar o banco de dados é através dos comandos abaixo:
 
