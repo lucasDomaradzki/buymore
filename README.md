@@ -30,6 +30,8 @@ docker compose up -d
 Para accesar o swagger abra em seu browser na página:
 http://localhost:8080/swagger-ui.html
 
+![alt text](https://raw.githubusercontent.com/lucasDomaradzki/buymore/refs/heads/main/src/main/resources/static/Screenshot%20from%202025-02-07%2016-12-43.png)
+
 ### Accesando  Banco de dados
 O banco de dados MySQL está exposto com os seguintes detalhes:
 Nome do banco: buy_more
